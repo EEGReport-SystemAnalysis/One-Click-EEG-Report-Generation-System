@@ -35,7 +35,17 @@
 
 ---
 
-## 3. 使用案例（表格版）
+## 3. 功能分解圖(functional decomposition diagram, FDD)
+<img src="系統分析與設計 FDD.png" alt="photo" width="1000">
+
+---
+
+## 4. 使用案例圖
+<img src="系統分析與設計 使用案例圖.png" alt="photo" width="1000">
+
+---
+
+## 5. 使用案例（表格版）
 
 ### 使用案例 UC001 — 使用者登入與權限管理
 | 欄位 | 內容 |
