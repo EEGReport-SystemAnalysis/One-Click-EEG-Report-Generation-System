@@ -31,7 +31,7 @@ classDiagram
         +量測ID UUID
         +量測時間 datetime
         +狀態 string
-        +備註 string
+        +會影響腦波的項目 string
     }
 
     class 腦波檔案 {
@@ -62,8 +62,8 @@ classDiagram
 
     class 分析結果 {
         +結果ID UUID
-        +摘要 text
-        +指標 json
+        +腦波報告結論 text
+        +腦波特徵計算 json
     }
 
     class 腦波報告 {
@@ -78,9 +78,9 @@ classDiagram
 
     class 圖表視覺化 {
         +圖表ID UUID
-        +類型 string
-        +資料來源 string
-        +呈現()
+        +腦波報告
+        +腦電圖
+        +異常波型直條圖
     }
 
     class 通知 {
@@ -129,7 +129,7 @@ classDiagram
 sequenceDiagram
     title UC1: 醫檢師上傳 EEG 並前處理
     actor Technician
-    participant UI as WebApp
+    participant UI as Frontend(Flutter)
     participant API as Backend(Django)
     participant DB as DB
     participant FS as Storage
@@ -259,11 +259,11 @@ flowchart TD
 
 ```mermaid
 sequenceDiagram
-    %% UC3: 主治醫師審閱並簽核報告
+    %% UC3: 主治醫師審閱並簽核報告                
     title UC3: 主治醫師審閱並簽核報告
 
     actor Doc as 主治醫師
-    participant UI as WebApp
+    participant UI as Frontend Flutter
     participant API as Backend Django
     participant DB as DB
     participant RS as ReportService
