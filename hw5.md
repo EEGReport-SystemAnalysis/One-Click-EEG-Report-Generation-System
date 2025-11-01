@@ -62,7 +62,7 @@ classDiagram
 
     class 分析結果 {
         +結果ID UUID
-        +摘要 text
+        +腦波報告結論 text
         +腦波特徵 json
     }
 
